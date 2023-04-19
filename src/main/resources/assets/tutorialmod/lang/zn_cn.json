@@ -1,4 +1,9 @@
 {
   "item.tutorialmod.zircon": "锆石",
-  "item.tutorialmod.raw_zircon": "粗锆石"
+  "item.tutorialmod.raw_zircon": "粗锆石",
+  "block.tutorialmod.zircon_block": "锆石块",
+  "block.tutorialmod.zircon_ore": "锆石矿",
+  "block.tutorialmod.deepslate_zircon_ore": "深板岩锆石矿",
+  "block.tutorialmod.netherrack_zircon_ore": "下界锆石矿",
+  "block.tutorialmod.endsstone_zircon_ore": "末地锆石矿"
 }
