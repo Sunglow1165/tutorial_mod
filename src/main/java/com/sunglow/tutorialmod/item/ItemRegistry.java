@@ -28,8 +28,11 @@ public class ItemRegistry {
     // 锆石
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
             () -> new Item(new Item.Properties().tab(ModTab.MODE_TAB)));
-    // 锆石
+    // 粗锆石
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
             () -> new Item(new Item.Properties().tab(ModTab.MODE_TAB)));
+    // 八球
+    public static final RegistryObject<Item> EIGHT_BALL_ITEM = ITEMS.register("eight_ball_item",
+            () -> new EightBallItem(new Item.Properties().tab(ModTab.MODE_TAB)));
 
 }
