@@ -61,7 +61,7 @@ public class BlockRegistry {
             () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6F).requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModTab.MODE_TAB);
 
-    //蓝莓作物 TODO 去注册作物的果实和种子Item
+    //蓝莓作物
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 

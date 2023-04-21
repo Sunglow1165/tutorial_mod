@@ -3,8 +3,12 @@ package com.sunglow.tutorialmod;
 import com.mojang.logging.LogUtils;
 import com.sunglow.tutorialmod.block.BlockRegistry;
 import com.sunglow.tutorialmod.item.ItemRegistry;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -27,5 +31,13 @@ public class TutorialMod {
         //将ITEMS的DeferredRegister实例注册到mod事件总线上，以便在游戏加载时异步注册mod的Item。
         ItemRegistry.ITEMS.register(modEventBus);
         BlockRegistry.BLOCKS.register(modEventBus);
+    }
+
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(BlockRegistry.BLUEBERRY_CROP.get(), RenderType.cutout());
+        }
     }
 }

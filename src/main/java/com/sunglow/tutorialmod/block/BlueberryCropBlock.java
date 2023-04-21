@@ -1,5 +1,6 @@
 package com.sunglow.tutorialmod.block;
 
+import com.sunglow.tutorialmod.item.ItemRegistry;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -24,7 +25,7 @@ public class BlueberryCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return super.getBaseSeedId();
+        return ItemRegistry.BLUEBERRY_SEEDS.get();
     }
 
     @Override

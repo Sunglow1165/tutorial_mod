@@ -1,10 +1,16 @@
 {
   "item.tutorialmod.zircon": "锆石",
   "item.tutorialmod.raw_zircon": "粗锆石",
+  "item.tutorialmod.eight_ball_item": "八球",
+  "item.tutorialmod.blueberry_seeds": "蓝莓种子",
+  "item.tutorialmod.blueberry": "蓝莓",
+
   "block.tutorialmod.zircon_block": "锆石块",
   "block.tutorialmod.zircon_ore": "锆石矿",
   "block.tutorialmod.deepslate_zircon_ore": "深板岩锆石矿",
   "block.tutorialmod.netherrack_zircon_ore": "下界锆石矿",
   "block.tutorialmod.endsstone_zircon_ore": "末地锆石矿",
-  "block.tutorialmod.eight_ball_item": "八球"
+  "block.tutorialmod.blueberry_corp": "蓝莓作物",
+
+  "itemGroup.tutorialtab": "锆石学习栏"
 }

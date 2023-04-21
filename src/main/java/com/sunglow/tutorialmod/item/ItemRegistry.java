@@ -1,8 +1,11 @@
 package com.sunglow.tutorialmod.item;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.block.BlockRegistry;
 import com.sunglow.tutorialmod.common.ModTab;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -34,5 +37,11 @@ public class ItemRegistry {
     // 八球
     public static final RegistryObject<Item> EIGHT_BALL_ITEM = ITEMS.register("eight_ball_item",
             () -> new EightBallItem(new Item.Properties().tab(ModTab.MODE_TAB)));
+    // 蓝莓种子
+    public static final RegistryObject<Item> BLUEBERRY_SEEDS = ITEMS.register("blueberry_seeds",
+            () -> new ItemNameBlockItem(BlockRegistry.BLUEBERRY_CROP.get(), new Item.Properties().tab(ModTab.MODE_TAB)));
+    // 蓝莓果实
+    public static final RegistryObject<Item> BLUEBERRY = ITEMS.register("blueberry",
+            () -> new Item(new Item.Properties().tab(ModTab.MODE_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(2F).build())));
 
 }
