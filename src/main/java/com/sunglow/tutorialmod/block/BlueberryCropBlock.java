@@ -1,6 +1,6 @@
 package com.sunglow.tutorialmod.block;
 
-import com.sunglow.tutorialmod.item.ItemRegistry;
+import com.sunglow.tutorialmod.registry.ItemRegistry;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;

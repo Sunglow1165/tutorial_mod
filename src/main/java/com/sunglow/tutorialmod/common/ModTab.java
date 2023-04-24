@@ -1,6 +1,6 @@
 package com.sunglow.tutorialmod.common;
 
-import com.sunglow.tutorialmod.item.ItemRegistry;
+import com.sunglow.tutorialmod.registry.ItemRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;

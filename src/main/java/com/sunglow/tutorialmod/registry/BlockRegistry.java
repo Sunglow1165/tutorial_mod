@@ -1,8 +1,10 @@
-package com.sunglow.tutorialmod.block;
+package com.sunglow.tutorialmod.registry;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.block.BlueberryCropBlock;
+import com.sunglow.tutorialmod.block.JumpyBlock;
+import com.sunglow.tutorialmod.block.ZirconLampBlock;
 import com.sunglow.tutorialmod.common.ModTab;
-import com.sunglow.tutorialmod.item.ItemRegistry;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -72,7 +74,10 @@ public class BlockRegistry {
         return toReturn;
     }
 
-    //注册方块对应的物品
+    /**
+     * {@link com.sunglow.tutorialmod.TutorialMod}
+     * 注册方块对应的物品
+     */
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return ItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }

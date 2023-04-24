@@ -1,8 +1,10 @@
 package com.sunglow.tutorialmod;
 
 import com.mojang.logging.LogUtils;
-import com.sunglow.tutorialmod.block.BlockRegistry;
-import com.sunglow.tutorialmod.item.ItemRegistry;
+import com.sunglow.tutorialmod.registry.BlockRegistry;
+import com.sunglow.tutorialmod.registry.ItemRegistry;
+import com.sunglow.tutorialmod.registry.PaintingRegistry;
+import com.sunglow.tutorialmod.registry.VillagerRegistry;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +33,8 @@ public class TutorialMod {
         //将ITEMS的DeferredRegister实例注册到mod事件总线上，以便在游戏加载时异步注册mod的Item。
         ItemRegistry.ITEMS.register(modEventBus);
         BlockRegistry.BLOCKS.register(modEventBus);
+        PaintingRegistry.PAINTING_VARIANTS.register(modEventBus);
+        VillagerRegistry.VillagerRegister(modEventBus);
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

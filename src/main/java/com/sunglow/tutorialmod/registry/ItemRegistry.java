@@ -1,7 +1,7 @@
-package com.sunglow.tutorialmod.item;
+package com.sunglow.tutorialmod.registry;
 
 import com.sunglow.tutorialmod.TutorialMod;
-import com.sunglow.tutorialmod.block.BlockRegistry;
+import com.sunglow.tutorialmod.item.EightBallItem;
 import com.sunglow.tutorialmod.common.ModTab;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
