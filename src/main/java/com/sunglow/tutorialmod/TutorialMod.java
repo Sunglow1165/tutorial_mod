@@ -5,6 +5,7 @@ import com.sunglow.tutorialmod.registry.BlockRegistry;
 import com.sunglow.tutorialmod.registry.ItemRegistry;
 import com.sunglow.tutorialmod.registry.PaintingRegistry;
 import com.sunglow.tutorialmod.registry.VillagerRegistry;
+import com.sunglow.tutorialmod.world.feature.ModConfiguredFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,6 +36,7 @@ public class TutorialMod {
         BlockRegistry.BLOCKS.register(modEventBus);
         PaintingRegistry.PAINTING_VARIANTS.register(modEventBus);
         VillagerRegistry.VillagerRegister(modEventBus);
+        ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
