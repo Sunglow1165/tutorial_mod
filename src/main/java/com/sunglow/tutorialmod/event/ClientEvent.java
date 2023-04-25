@@ -1,6 +1,8 @@
 package com.sunglow.tutorialmod.event;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.networking.ModMessage;
+import com.sunglow.tutorialmod.networking.packet.DrinkWaterC2SPacket;
 import com.sunglow.tutorialmod.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -23,7 +25,7 @@ public class ClientEvent {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event) {
             if (KeyBinding.DRINKING_KEY.consumeClick()) {
-                Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pressed a Key!"));
+                ModMessage.sendToServer(new DrinkWaterC2SPacket());
             }
         }
     }
