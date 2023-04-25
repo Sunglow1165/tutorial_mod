@@ -17,6 +17,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 
 /**
+ * 放置特性
+ *
  * @Author xueyuntong
  * @Date 2023/4/24 18:23
  */

@@ -17,6 +17,8 @@ import java.util.List;
 import java.util.function.Supplier;
 
 /**
+ * 配置特性
+ *
  * @Author xueyuntong
  * @Date 2023/4/24 18:01
  */
