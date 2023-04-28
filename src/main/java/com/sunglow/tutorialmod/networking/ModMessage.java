@@ -1,8 +1,10 @@
 package com.sunglow.tutorialmod.networking;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.client.ThirstHudOverlay;
 import com.sunglow.tutorialmod.networking.packet.DrinkWaterC2SPacket;
 import com.sunglow.tutorialmod.networking.packet.ExampleC2SPacket;
+import com.sunglow.tutorialmod.networking.packet.ThirstDataSyncC2SPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -11,6 +13,8 @@ import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 /**
+ * 消息
+ *
  * @Author xueyuntong
  * @Date 2023/4/25 15:05
  */
@@ -42,6 +46,12 @@ public class ModMessage {
                 .decoder(DrinkWaterC2SPacket::new)
                 .encoder(DrinkWaterC2SPacket::toBytes)
                 .consumerMainThread(DrinkWaterC2SPacket::handle)
+                .add();
+
+        net.messageBuilder(ThirstDataSyncC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(ThirstDataSyncC2SPacket::new)
+                .encoder(ThirstDataSyncC2SPacket::toBytes)
+                .consumerMainThread(ThirstDataSyncC2SPacket::handle)
                 .add();
     }
 

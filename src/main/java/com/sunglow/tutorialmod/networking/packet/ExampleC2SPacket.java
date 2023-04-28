@@ -10,6 +10,8 @@ import net.minecraftforge.network.NetworkEvent;
 import java.util.function.Supplier;
 
 /**
+ * 例子消息包
+ *
  * @Author xueyuntong
  * @Date 2023/4/25 15:29
  */
