@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 
 /**
- * 口渴值的显示
+ * 口渴值的GUI显示界面
  *
  * @Author xueyuntong
  * @Date 2023/4/26 11:19
