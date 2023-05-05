@@ -5,8 +5,6 @@ import com.sunglow.tutorialmod.client.ThirstHudOverlay;
 import com.sunglow.tutorialmod.networking.ModMessage;
 import com.sunglow.tutorialmod.networking.packet.DrinkWaterC2SPacket;
 import com.sunglow.tutorialmod.util.KeyBinding;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;

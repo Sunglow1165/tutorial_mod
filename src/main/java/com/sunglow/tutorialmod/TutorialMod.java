@@ -1,6 +1,8 @@
 package com.sunglow.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import com.sunglow.tutorialmod.fluid.ModFluidTypes;
+import com.sunglow.tutorialmod.fluid.ModFluids;
 import com.sunglow.tutorialmod.networking.ModMessage;
 import com.sunglow.tutorialmod.registry.BlockRegistry;
 import com.sunglow.tutorialmod.registry.ItemRegistry;
@@ -40,6 +42,8 @@ public class TutorialMod {
         VillagerRegistry.VillagerRegister(modEventBus);
         ModPlacedFeatures.register(modEventBus);
         ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);
+        ModFluids.FLUIDS.register(modEventBus);
+        ModFluidTypes.FLUID_TYPES.register(modEventBus);
     }
 
     private void commonSetup(FMLClientSetupEvent event) {
@@ -53,7 +57,8 @@ public class TutorialMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
         }
     }
 }

@@ -1,11 +1,14 @@
 package com.sunglow.tutorialmod.registry;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.fluid.ModFluids;
 import com.sunglow.tutorialmod.item.EightBallItem;
 import com.sunglow.tutorialmod.common.ModTab;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -43,5 +46,9 @@ public class ItemRegistry {
     // 蓝莓果实
     public static final RegistryObject<Item> BLUEBERRY = ITEMS.register("blueberry",
             () -> new Item(new Item.Properties().tab(ModTab.MODE_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(2F).build())));
+    // 肥皂水桶
+    public static final RegistryObject<Item> SOAP_WATER_BUCKET = ITEMS.register("soap_water_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_SOAP_WATER,
+                    new Item.Properties().tab(ModTab.MODE_TAB).craftRemainder(Items.BUCKET).stacksTo(1)));
 
 }
