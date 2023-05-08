@@ -4,10 +4,9 @@ import com.mojang.logging.LogUtils;
 import com.sunglow.tutorialmod.fluid.ModFluidTypes;
 import com.sunglow.tutorialmod.fluid.ModFluids;
 import com.sunglow.tutorialmod.networking.ModMessage;
-import com.sunglow.tutorialmod.registry.BlockRegistry;
-import com.sunglow.tutorialmod.registry.ItemRegistry;
-import com.sunglow.tutorialmod.registry.PaintingRegistry;
-import com.sunglow.tutorialmod.registry.VillagerRegistry;
+import com.sunglow.tutorialmod.item.ModItem;
+import com.sunglow.tutorialmod.painting.ModPainting;
+import com.sunglow.tutorialmod.villager.ModVillager;
 import com.sunglow.tutorialmod.world.feature.ModConfiguredFeatures;
 import com.sunglow.tutorialmod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -36,11 +35,11 @@ public class TutorialMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         //将ITEMS的DeferredRegister实例注册到mod事件总线上，以便在游戏加载时异步注册mod的Item。
-        ItemRegistry.ITEMS.register(modEventBus);
-        BlockRegistry.BLOCKS.register(modEventBus);
-        PaintingRegistry.PAINTING_VARIANTS.register(modEventBus);
-        VillagerRegistry.VillagerRegister(modEventBus);
-        ModPlacedFeatures.register(modEventBus);
+        ModItem.ITEMS.register(modEventBus);
+        com.sunglow.tutorialmod.block.ModBlock.BLOCKS.register(modEventBus);
+        ModPainting.PAINTING_VARIANTS.register(modEventBus);
+        ModVillager.VillagerRegister(modEventBus);
+        ModPlacedFeatures.PLACED_FEATURES.register(modEventBus);
         ModConfiguredFeatures.CONFIGURED_FEATURES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
@@ -48,7 +47,7 @@ public class TutorialMod {
 
     private void commonSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            VillagerRegistry.registerPOIs();
+            ModVillager.registerPOIs();
             ModMessage.register();
         });
     }
