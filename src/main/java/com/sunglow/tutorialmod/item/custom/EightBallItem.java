@@ -1,4 +1,4 @@
-package com.sunglow.tutorialmod.item;
+package com.sunglow.tutorialmod.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;

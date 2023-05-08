@@ -1,4 +1,4 @@
-package com.sunglow.tutorialmod.block;
+package com.sunglow.tutorialmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

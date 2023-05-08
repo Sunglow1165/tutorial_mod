@@ -1,4 +1,4 @@
-package com.sunglow.tutorialmod.block;
+package com.sunglow.tutorialmod.block.custom;
 
 import com.sunglow.tutorialmod.item.ModItem;
 import net.minecraft.world.level.ItemLike;

@@ -1,9 +1,8 @@
 package com.sunglow.tutorialmod.item;
 
 import com.sunglow.tutorialmod.TutorialMod;
-import com.sunglow.tutorialmod.block.ModBlock;
 import com.sunglow.tutorialmod.fluid.ModFluids;
-import com.sunglow.tutorialmod.item.EightBallItem;
+import com.sunglow.tutorialmod.item.custom.EightBallItem;
 import com.sunglow.tutorialmod.common.ModTab;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BucketItem;

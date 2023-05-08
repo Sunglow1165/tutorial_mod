@@ -1,6 +1,9 @@
 package com.sunglow.tutorialmod.block;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.block.custom.BlueberryCropBlock;
+import com.sunglow.tutorialmod.block.custom.JumpyBlock;
+import com.sunglow.tutorialmod.block.custom.ZirconLampBlock;
 import com.sunglow.tutorialmod.common.ModTab;
 import com.sunglow.tutorialmod.fluid.ModFluids;
 import com.sunglow.tutorialmod.item.ModItem;
