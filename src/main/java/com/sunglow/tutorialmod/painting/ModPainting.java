@@ -1,4 +1,4 @@
-package com.sunglow.tutorialmod.registry;
+package com.sunglow.tutorialmod.painting;
 
 import com.sunglow.tutorialmod.TutorialMod;
 import net.minecraft.world.entity.decoration.PaintingVariant;
@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
  * @Author xueyuntong
  * @Date 2023/4/24 14:09
  */
-public class PaintingRegistry {
+public class ModPainting {
     //绘画变体延迟寄存器
     public static final DeferredRegister<PaintingVariant> PAINTING_VARIANTS = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, TutorialMod.MOD_ID);
 

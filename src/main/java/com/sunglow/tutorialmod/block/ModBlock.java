@@ -1,11 +1,9 @@
-package com.sunglow.tutorialmod.registry;
+package com.sunglow.tutorialmod.block;
 
 import com.sunglow.tutorialmod.TutorialMod;
-import com.sunglow.tutorialmod.block.BlueberryCropBlock;
-import com.sunglow.tutorialmod.block.JumpyBlock;
-import com.sunglow.tutorialmod.block.ZirconLampBlock;
 import com.sunglow.tutorialmod.common.ModTab;
 import com.sunglow.tutorialmod.fluid.ModFluids;
+import com.sunglow.tutorialmod.item.ModItem;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,7 +26,7 @@ import java.util.function.Supplier;
  * @Author xueyuntong
  * @Date 2023/4/18 18:32
  */
-public class BlockRegistry {
+public class ModBlock {
 
     //方块延迟寄存器
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
@@ -85,6 +83,6 @@ public class BlockRegistry {
      * 注册方块对应的物品
      */
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return ItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return ModItem.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 }

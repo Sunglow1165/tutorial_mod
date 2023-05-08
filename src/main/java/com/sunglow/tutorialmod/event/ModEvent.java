@@ -3,8 +3,8 @@ package com.sunglow.tutorialmod.event;
 import com.sunglow.tutorialmod.TutorialMod;
 import com.sunglow.tutorialmod.networking.ModMessage;
 import com.sunglow.tutorialmod.networking.packet.ThirstDataSyncS2CPacket;
-import com.sunglow.tutorialmod.registry.ItemRegistry;
-import com.sunglow.tutorialmod.registry.VillagerRegistry;
+import com.sunglow.tutorialmod.item.ModItem;
+import com.sunglow.tutorialmod.villager.ModVillager;
 import com.sunglow.tutorialmod.thirst.PlayerThirst;
 import com.sunglow.tutorialmod.thirst.PlayerThirstProvider;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -47,16 +47,16 @@ public class ModEvent {
         //交易1
         if (event.getType() == VillagerProfession.TOOLSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ItemRegistry.EIGHT_BALL_ITEM.get(), 1);
+            ItemStack stack = new ItemStack(ModItem.EIGHT_BALL_ITEM.get(), 1);
             int villagerLevel = 1;
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 2),
                     stack, 10, 8, 0.02F));
         }
         //交易2
-        if (event.getType() == VillagerRegistry.JUMP_MASTER.get()) {
+        if (event.getType() == ModVillager.JUMP_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ItemRegistry.BLUEBERRY.get(), 15);
+            ItemStack stack = new ItemStack(ModItem.BLUEBERRY.get(), 15);
             int villagerLevel = 1;
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 5),

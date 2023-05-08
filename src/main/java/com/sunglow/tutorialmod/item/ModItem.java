@@ -1,6 +1,7 @@
-package com.sunglow.tutorialmod.registry;
+package com.sunglow.tutorialmod.item;
 
 import com.sunglow.tutorialmod.TutorialMod;
+import com.sunglow.tutorialmod.block.ModBlock;
 import com.sunglow.tutorialmod.fluid.ModFluids;
 import com.sunglow.tutorialmod.item.EightBallItem;
 import com.sunglow.tutorialmod.common.ModTab;
@@ -19,7 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
  * @Author xueyuntong
  * @Date 2023/4/18 17:10
  */
-public class ItemRegistry {
+public class ModItem {
 
     /**
      * create()创建一个DeferredRegister延迟寄存器 绑定到ForgeRegistries中,Mod_ID用于区分模组
@@ -42,7 +43,7 @@ public class ItemRegistry {
             () -> new EightBallItem(new Item.Properties().tab(ModTab.MODE_TAB)));
     // 蓝莓种子
     public static final RegistryObject<Item> BLUEBERRY_SEEDS = ITEMS.register("blueberry_seeds",
-            () -> new ItemNameBlockItem(BlockRegistry.BLUEBERRY_CROP.get(), new Item.Properties().tab(ModTab.MODE_TAB)));
+            () -> new ItemNameBlockItem(com.sunglow.tutorialmod.block.ModBlock.BLUEBERRY_CROP.get(), new Item.Properties().tab(ModTab.MODE_TAB)));
     // 蓝莓果实
     public static final RegistryObject<Item> BLUEBERRY = ITEMS.register("blueberry",
             () -> new Item(new Item.Properties().tab(ModTab.MODE_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(2F).build())));

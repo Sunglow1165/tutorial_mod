@@ -1,6 +1,6 @@
 package com.sunglow.tutorialmod.common;
 
-import com.sunglow.tutorialmod.registry.ItemRegistry;
+import com.sunglow.tutorialmod.item.ModItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -15,7 +15,7 @@ public class ModTab {
     public static final CreativeModeTab MODE_TAB = new CreativeModeTab("tutorialmod") {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(ItemRegistry.ZIRCON.get());
+            return new ItemStack(ModItem.ZIRCON.get());
         }
     };
 }
