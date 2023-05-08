@@ -23,10 +23,25 @@ import java.util.function.Consumer;
  */
 public class BaseFluidType extends FluidType {
 
+    /**
+     * 静态贴图
+     */
     private final ResourceLocation stillTexture;
+    /**
+     * 流动贴图
+     */
     private final ResourceLocation flowingTexture;
+    /**
+     * 覆盖贴图
+     */
     private final ResourceLocation overlayTexture;
+    /**
+     * 流体的颜色
+     */
     private final int tintColor;
+    /**
+     * 流体在雾化状态下的颜色
+     */
     private final Vector3f fogColor;
 
     public BaseFluidType(final ResourceLocation stillTexture, final ResourceLocation flowingTexture, final ResourceLocation overlayTexture,
@@ -59,6 +74,11 @@ public class BaseFluidType extends FluidType {
         return fogColor;
     }
 
+    /**
+     * 初始化客户端（即游戏客户端），为流体的渲染提供信息
+     *
+     * @param consumer 消费者
+     */
     @Override
     public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
         consumer.accept(new IClientFluidTypeExtensions() {
@@ -82,12 +102,26 @@ public class BaseFluidType extends FluidType {
                 return tintColor;
             }
 
+            /**
+             * 修改流体在雾化状态下的颜色
+             * @param camera 相机
+             * @param partialTick 部分时刻
+             * @param level 客户端级别
+             * @param renderDistance 客户端级别
+             * @return 流体的雾化颜色
+             */
             @Override
             public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance,
                                                     float darkenWorldAmount, Vector3f fluidFogColor) {
                 return fogColor;
             }
 
+            /**
+             *  修改雾的渲染效果
+             * @param camera 相机
+             * @param mode 雾的模式
+             * @param shape 雾的形状
+             */
             @Override
             public void modifyFogRender(Camera camera, FogRenderer.FogMode mode, float renderDistance, float partialTick,
                                         float nearDistance, float farDistance, FogShape shape) {
