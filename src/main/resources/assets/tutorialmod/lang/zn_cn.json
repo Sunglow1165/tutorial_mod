@@ -4,13 +4,21 @@
   "item.tutorialmod.eight_ball_item": "八球",
   "item.tutorialmod.blueberry_seeds": "蓝莓种子",
   "item.tutorialmod.blueberry": "蓝莓",
+  "item.tutorialmod.soap_water_bucket": "肥皂水桶",
 
   "block.tutorialmod.zircon_block": "锆石块",
   "block.tutorialmod.zircon_ore": "锆石矿",
   "block.tutorialmod.deepslate_zircon_ore": "深板岩锆石矿",
   "block.tutorialmod.netherrack_zircon_ore": "下界锆石矿",
-  "block.tutorialmod.endsstone_zircon_ore": "末地锆石矿",
+  "block.tutorialmod.endstone_zircon_ore": "末地锆石矿",
   "block.tutorialmod.blueberry_corp": "蓝莓作物",
 
-  "itemGroup.tutorialtab": "锆石学习栏"
+  "itemGroup.tutorialtab": "锆石学习栏",
+  "entity.minecraft.villager.tutorialmod.jumpy_master": "跳跃者",
+
+  "key.category.tutorialmod.tutorial": "教学模组",
+  "key.tutorialmod.drink_water": "喝水",
+
+  "message.tutorialmod.drink_water": "喝下了水",
+  "message.tutorialmod.no_water": "没有发现水源！"
 }

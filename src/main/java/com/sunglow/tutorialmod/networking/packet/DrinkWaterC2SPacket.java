@@ -24,11 +24,11 @@ public class DrinkWaterC2SPacket {
     /**
      * 喝水操作
      */
-    private static final String MESSAGE_DRINK_WATER = "message.tutorial.drink_water";
+    private static final String MESSAGE_DRINK_WATER = "message.tutorialmod.drink_water";
     /**
      * 未发现水源
      */
-    private static final String MESSAGE_NO_WATER = "message.tutorial.no_water";
+    private static final String MESSAGE_NO_WATER = "message.tutorialmod.no_water";
 
     public DrinkWaterC2SPacket() {
     }
