@@ -34,10 +34,12 @@ public class ModFluids {
             () -> new ForgeFlowingFluid.Flowing(ModFluids.SOAP_WATER_FLUID_PROPERTIES));
 
     /**
-     *
+     * 设置了一些流体必要的属性
      */
     public static final ForgeFlowingFluid.Properties SOAP_WATER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.SOAP_WATER_FLUID_TYPE, SOURCE_SOAP_WATER, FLOWING_SOAP_WATER)
+            // 流体的行为                                    流体的方块状态
             .slopeFindDistance(2).levelDecreasePerBlock(2).block(com.sunglow.tutorialmod.block.ModBlock.SOAP_WATER_BLOCK)
+            // 流体桶的物品，该桶可用于捡起或放置肥皂水流体
             .bucket(ModItem.SOAP_WATER_BUCKET);
 }
