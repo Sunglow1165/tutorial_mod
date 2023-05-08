@@ -10,6 +10,8 @@ import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -51,5 +53,8 @@ public class ModItem {
     public static final RegistryObject<Item> SOAP_WATER_BUCKET = ITEMS.register("soap_water_bucket",
             () -> new BucketItem(ModFluids.SOURCE_SOAP_WATER,
                     new Item.Properties().tab(ModTab.MODE_TAB).craftRemainder(Items.BUCKET).stacksTo(1)));
+    // 薛的剑
+    public static final RegistryObject<Item> XUESWORD = ITEMS.register("xuesword",
+            () -> new SwordItem(Tiers.DIAMOND, 10, 5F, new Item.Properties().tab(ModTab.MODE_TAB).stacksTo(1)));
 
 }
